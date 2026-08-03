@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
+import { describe, it, beforeEach, expect } from 'vitest';
 
 describe('App', () => {
   beforeEach(async () => {
@@ -17,7 +18,8 @@ describe('App', () => {
   it('should render title', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
+    fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angel-site');
+    expect(compiled.querySelector('h1')?.textContent).toContain('HAPPY NATIONAL');
   });
 });

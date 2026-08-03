@@ -1,3 +1,227 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+@source "./app/**/*.ts";
+@source "./app/**/*.html";
+
+@theme {
+  --font-pixel: "Press Start 2P", monospace;
+  --font-cute: "Fredoka", sans-serif;
+  
+  --color-hk-pink-soft: #ffe5ec;
+  --color-hk-pink-light: #fbb1bd;
+  --color-hk-pink: #ff85a1;
+  --color-hk-pink-dark: #ff477e;
+  --color-hk-red: #ff2a54;
+  --color-hk-yellow: #ffd166;
+  --color-hk-text: #4a0e17;
+  --color-hk-cream: #fffafb;
+}
+
+:root {
+  --hk-pink-soft: #ffe5ec;
+  --hk-pink-light: #fbb1bd;
+  --hk-pink: #ff85a1;
+  --hk-pink-dark: #ff477e;
+  --hk-red: #ff2a54;
+  --hk-yellow: #ffd166;
+  --hk-text: #4a0e17;
+  --hk-cream: #fffafb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--hk-pink-soft);
+  color: var(--hk-text);
+  font-family: "Fredoka", sans-serif;
+  overflow-x: hidden;
+}
+
+/* 8-bit pixel custom borders */
+.pixel-border-sm {
+  border: 3px solid var(--hk-text);
+  border-radius: 4px;
+}
+
+.pixel-border-md {
+  border: 4px solid var(--hk-text);
+  border-radius: 6px;
+}
+
+.pixel-border-lg {
+  border: 6px solid var(--hk-text);
+  border-radius: 8px;
+}
+
+/* Retro Pixel Button */
+.pixel-btn {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.75rem;
+  color: var(--hk-cream);
+  background-color: var(--hk-pink);
+  border: 4px solid var(--hk-text);
+  padding: 12px 24px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 0 var(--hk-text);
+  transition: all 0.1s ease;
+  user-select: none;
+  outline: none;
+}
+
+.pixel-btn:hover {
+  background-color: var(--hk-pink-light);
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--hk-text);
+}
+
+.pixel-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 var(--hk-text);
+}
+
+.pixel-btn-red {
+  background-color: var(--hk-red);
+}
+.pixel-btn-red:hover {
+  background-color: #ff5c7d;
+}
+
+.pixel-btn-yellow {
+  background-color: var(--hk-yellow);
+  color: var(--hk-text);
+}
+.pixel-btn-yellow:hover {
+  background-color: #ffe099;
+}
+
+/* CRT Screen Scanlines effect */
+.crt-screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-screen::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.08) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 4px, 6px 100%;
+  z-index: 10;
+  pointer-events: none;
+  animation: scanline 10s linear infinite;
+}
+
+@keyframes scanline {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
+}
+
+/* Floating elements */
+.heart-float {
+  position: absolute;
+  pointer-events: none;
+  animation: floatUp 4s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Text blink cursor */
+.pixel-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  background-color: currentColor;
+  animation: blink 0.8s steps(2, start) infinite;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+/* Bounce animations */
+.bounce-retro {
+  animation: bounceRetro 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes bounceRetro {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+/* Heart pulse animation */
+.pulse-heart {
+  animation: pulseHeart 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes pulseHeart {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.15); }
+}
+
+/* Scan-wipe transition effect */
+.scan-wipe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hk-pink-dark);
+  z-index: 999;
+  transform: translateY(-100%);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.scan-wipe.active {
+  transform: translateY(100%);
+}
+
+/* Image templates & overlay styles */
+.pixel-img-frame {
+  background-color: var(--hk-cream);
+  padding: 8px;
+  border: 4px solid var(--hk-text);
+  box-shadow: 6px 6px 0 rgba(74, 14, 23, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pixel-img-caption {
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  text-align: center;
+  margin-top: 8px;
+  color: var(--hk-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pixel-caption-emoji {
+  font-size: 16px;
+  line-height: 1;
+}
+
+
