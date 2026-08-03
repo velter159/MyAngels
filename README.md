@@ -1,59 +1,63 @@
-# AngelSite
+# 🎀 AngelSite — 8-Bit Retro Girlfriend Day Surprise 🎀
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.7.
+A charming, interactive 8-bit retro Gameboy-style tribute website built as a sweet surprise for National Girlfriend Day. 
 
-## Development server
+Live Preview: **[myangels.netlify.app](https://myangels.netlify.app)**
 
-To start a local development server, run:
+---
 
+## 🎮 What is AngelSite?
+
+The website is styled as a handheld pocket console called **Angel Play**. It features:
+
+*   **Interactive Handheld Console**: A fully responsive, pink retro Gameboy frame equipped with a working D-pad, A/B buttons, Select/Start, and a red/green power LED.
+*   **Chiptune Audio System**: Interactive blip/select sounds, coin-collection alerts, game-over tunes, and looping background music (with manual mute/unmute control).
+*   **Nostalgic Memory Cartridges**: A cartridge selection screen loading beautiful retro-themed pages of precious memories:
+    *   **🌸 At First Glance**: Our first date at Imago Mall.
+    *   **🍛 Food Adventures**: Celebrating our joint love for delicious food.
+    *   **🧁 Sweet Moments**: Inside jokes, cozy hugs, and family meets.
+    *   **✈️ My Traveling Partner**: Future travels (currently under a retro maintenance build screen).
+*   **Interactive Portrait Frame**: Clicking **SELECT** on the console reveals a custom photo frame with a picture of the couple.
+*   **⭐️ Hidden "Angel Run" Minigame**: Pressing the classic retro cheat code sequence **Up ➔ Down ➔ Left ➔ Right** (either on the D-pad or keyboard arrow keys) unlocks a custom side-scrolling jump minigame with local high scores!
+
+---
+
+## 🛠️ Tech Stack
+
+*   **Framework**: [Angular](https://angular.dev/) (utilizing Standalone Components, Signals state management, and native template control flows)
+*   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) & Vanilla CSS with CRT-screen effect scanlines
+*   **Platform**: Deployed on [Netlify](https://www.netlify.com/)
+
+---
+
+## 🚀 How to Run Locally
+
+### 1. Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) installed.
+
+### 2. Clone and Install
+Install the project dependencies:
 ```bash
-ng serve
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### 3. Run Development Server
+Start the local server:
 ```bash
-ng generate component component-name
+npm start
+```
+Once started, navigate to `http://localhost:4200/` in your browser. The application will hot-reload automatically upon file changes.
+
+### 4. Build for Production
+To build the distribution package:
+```bash
+npm run build
+```
+Build files will be generated in the `dist/` directory.
+
+### 5. Running Tests
+To run unit tests with Vitest:
+```bash
+npm run test
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
