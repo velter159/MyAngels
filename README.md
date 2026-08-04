@@ -2,8 +2,7 @@
 
 A charming, interactive 8-bit retro Gameboy-style tribute website built as a sweet surprise for National Girlfriend Day.
 
-Live Preview: **[myangels.netlify.app](https://myangels.netlify.app)**
-Web Template: **[RetroLovePlay](https://github.com/velter159/RetroLovePlay)**
+Live Preview: **[myangels.netlify.app](https://myangels.netlify.app)**<br>Web Template: **[RetroLovePlay](https://github.com/velter159/RetroLovePlay)**
 
 ---
 
