@@ -1,4 +1,4 @@
-# 🎀 AngelSite — 8-Bit Retro Girlfriend Day Surprise 🎀
+# 🎀 MyAngels — 8-Bit Retro Girlfriend Day Surprise 🎀
 
 A charming, interactive 8-bit retro Gameboy-style tribute website built as a sweet surprise for National Girlfriend Day.
 
@@ -7,14 +7,14 @@ Web Template: **[RetroLovePlay](https://github.com/velter159/RetroLovePlay)**
 
 ---
 
-## 🎮 What is AngelSite?
+## 🎮 What is MyAngels?
 
 The website is styled as a handheld pocket console called **Angel Play**. It features:
 
 - **Interactive Handheld Console**: A fully responsive, pink retro Gameboy frame equipped with a working D-pad, A/B buttons, Select/Start, and a red/green power LED.
 - **Chiptune Audio System**: Interactive blip/select sounds, coin-collection alerts, game-over tunes, and looping background music (with manual mute/unmute control).
 - **Nostalgic Memory Cartridges**: A cartridge selection screen loading beautiful retro-themed pages of precious memories:
-  - **🌸 At First Glance**: Our first date at Imago Mall.
+  - **🌸 At First Glance**: Our first date.
   - **🍛 Food Adventures**: Celebrating our joint love for delicious food.
   - **🧁 Sweet Moments**: Inside jokes, cozy hugs, and family meets.
   - **✈️ My Traveling Partner**: Future travels (currently under a retro maintenance build screen).
